@@ -59,3 +59,7 @@ select avg(SALARY) as Totalsalary from EmployeePayRoll;
 alter table EmployeePayroll add Phone bigint
 alter table EmployeePayroll add Address varchar(250) Not Null default 'Banglore'
 alter table EmployeePayroll add Department varchar(200) 
+
+---Renaming Coulumn---
+Exec sp_rename 'EmployeePayroll.Salary','BasicPay','COLUMN';
+alter table EmployeePayroll add Deductions float,TaxablePay float,IncomeTax float,NetPay float;
