@@ -63,3 +63,9 @@ alter table EmployeePayroll add Department varchar(200)
 ---Renaming Coulumn---
 Exec sp_rename 'EmployeePayroll.Salary','BasicPay','COLUMN';
 alter table EmployeePayroll add Deductions float,TaxablePay float,IncomeTax float,NetPay float;
+
+
+---Inserting terrissa part---
+Insert Into EmployeePayroll values('Terissa',29546,'2001-02-03','F',783424,'Banglore','Sales',546,29000,2300,26700),
+('Terissa',29546,'2001-02-03','F',783424,'Banglore','Marketing',546,29000,2300,26700);
+
