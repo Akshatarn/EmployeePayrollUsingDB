@@ -40,3 +40,18 @@ UPDATE EmployeePayroll SET GENDER='F' WHERE NAME='NidhI'
 UPDATE EmployeePayroll SET GENDER='F' WHERE NAME='Geetha'
 UPDATE EmployeePayroll SET GENDER='F' WHERE NAME='Sparsha'
 SELECT *FROM EmployeePayroll;
+
+---Finding sum,average,max,min---
+select sum(SALARY) from EmployeePayRoll 
+select sum(SALARY) as Totalsalary from EmployeePayRoll 
+select sum(SALARY) from EmployeePayRoll group by GENDER;
+select sum(SALARY) as Totalsalary,GENDER from EmployeePayRoll group by GENDER;
+select max(SALARY) as Totalsalary,GENDER from EmployeePayRoll group by GENDER;
+select * from EmployeePayRoll where SALARY=(select Max(SALARY) as totalsalary from employeepayroll where GENDER='F' )
+select * from EmployeePayRoll where SALARY=(select Max(SALARY) as totalsalary from employeepayroll where GENDER='M' )
+select * from EmployeePayRoll where SALARY in (select Max(SALARY) as totalsalary from employeepayroll group by GENDER)
+select name,SALARY,GENDER from EmployeePayRoll where SALARY in (select Max(SALARY) as totalsalary from employeepayroll group by GENDER)
+select name,SALARY,GENDER from EmployeePayRoll where SALARY in (select Min(SALARY) as totalsalary from employeepayroll group by GENDER)
+select avg(SALARY) as Totalsalary, GENDER from EmployeePayRoll group by GENDER
+select avg(SALARY) as Totalsalary from EmployeePayRoll;
+
