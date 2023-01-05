@@ -17,5 +17,26 @@ INSERT INTO EmployeePayroll VALUES('Vijay',25000,'2020-03-04'),
 ('Rohit',80000,'2020-02-05'),
 ('Rohit',80000,'2021-08-13');
 
+---DELETE FROM EmployeePayroll WHERE NAME='Rohit'---
+---SELECT *FROM EmployeePayroll---
+---INSERT INTO EmployeePayroll VALUES('Rohit',80000,'2020-02-05'),---
+---('Sparsha',40000,'2021-08-13'),---
+---('Nidhi',60000,'2022-01-01');---
+---SELECT *FROM EmployeePayroll---
 ---Geting data from table---
+SELECT *FROM EmployeePayroll;
+
+---Reading employee from table---
+SELECT *FROM EmployeePayroll WHERE NAME='Rohit'
+SELECT *FROM EmployeePayroll WHERE STARTDATE BETWEEN '2000-02-01' AND '2023-01-01';
+
+
+
+---Adding New coulumn to the table called gender---
+ALTER TABLE EmployeePayroll ADD GENDER CHAR(1);
+UPDATE EmployeePayroll SET GENDER='M' WHERE NAME='Rohit'
+UPDATE EmployeePayroll SET GENDER='M' WHERE NAME='VijaY'
+UPDATE EmployeePayroll SET GENDER='F' WHERE NAME='NidhI'
+UPDATE EmployeePayroll SET GENDER='F' WHERE NAME='Geetha'
+UPDATE EmployeePayroll SET GENDER='F' WHERE NAME='Sparsha'
 SELECT *FROM EmployeePayroll;
