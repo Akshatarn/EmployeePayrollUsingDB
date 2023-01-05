@@ -55,3 +55,7 @@ select name,SALARY,GENDER from EmployeePayRoll where SALARY in (select Min(SALAR
 select avg(SALARY) as Totalsalary, GENDER from EmployeePayRoll group by GENDER
 select avg(SALARY) as Totalsalary from EmployeePayRoll;
 
+---Extending table---
+alter table EmployeePayroll add Phone bigint
+alter table EmployeePayroll add Address varchar(250) Not Null default 'Banglore'
+alter table EmployeePayroll add Department varchar(200) 
